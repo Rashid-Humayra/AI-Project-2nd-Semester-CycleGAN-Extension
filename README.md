@@ -1,4 +1,4 @@
-
+#  Used for an educational project. Cloned from original repo.
 <img src='imgs/horse2zebra.gif' align="right" width=384>
 
 <br><br><br>
