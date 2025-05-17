@@ -1,0 +1,72 @@
+wandb: Currently logged in as: hrzannat710 (hrzannat710-university-of-toulon-france) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.19.11
+wandb: Run data is saved locally in /home/mundus/hrashid173/CycleGAN-master/wandb/run-20250510_115155-q023dd6q
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run waymo2bdd100k
+wandb: ⭐️ View project at https://wandb.ai/hrzannat710-university-of-toulon-france/CycleGAN-and-pix2pix
+wandb: 🚀 View run at https://wandb.ai/hrzannat710-university-of-toulon-france/CycleGAN-and-pix2pix/runs/q023dd6q
+----------------- Options ---------------
+             aspect_ratio: 1.0                           
+               batch_size: 1                             
+          checkpoints_dir: ./checkpoints                 
+                crop_size: 256                           
+                 dataroot: ./datasets/waymo2bdd100k      	[default: None]
+             dataset_mode: unaligned                     
+                direction: AtoB                          
+          display_winsize: 256                           
+                    epoch: latest                        
+                     eval: False                         
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                  isTrain: False                         	[default: None]
+                load_iter: 0                             	[default: 0]
+                load_size: 256                           
+         max_dataset_size: inf                           
+                    model: cycle_gan                     	[default: test]
+               n_layers_D: 3                             
+                     name: waymo2bdd100k                 	[default: experiment_name]
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: resnet_9blocks                
+                      ngf: 64                            
+               no_dropout: True                          
+                  no_flip: False                         
+                     norm: instance                      
+                 num_test: 50                            
+              num_threads: 4                             
+                output_nc: 3                             
+                    phase: test                          
+               preprocess: none                          	[default: resize_and_crop]
+              results_dir: ./results/                    
+           serial_batches: False                         
+                   suffix:                               
+                use_wandb: True                          	[default: False]
+                  verbose: False                         
+       wandb_project_name: CycleGAN-and-pix2pix          
+----------------- End -------------------
+dataset [UnalignedDataset] was created
+initialize network with normal
+initialize network with normal
+model [CycleGANModel] was created
+loading the model from ./checkpoints/waymo2bdd100k/latest_net_G_A.pth
+loading the model from ./checkpoints/waymo2bdd100k/latest_net_G_B.pth
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+-----------------------------------------------
+creating web directory ./results/waymo2bdd100k/test_latest
+processing (0000)-th image... ['./datasets/waymo2bdd100k/testA/000.png']
+processing (0005)-th image... ['./datasets/waymo2bdd100k/testA/005.png']
+processing (0010)-th image... ['./datasets/waymo2bdd100k/testA/010.png']
+processing (0015)-th image... ['./datasets/waymo2bdd100k/testA/015.png']
+processing (0020)-th image... ['./datasets/waymo2bdd100k/testA/020.png']
+processing (0025)-th image... ['./datasets/waymo2bdd100k/testA/025.png']
+processing (0030)-th image... ['./datasets/waymo2bdd100k/testA/030.png']
+processing (0035)-th image... ['./datasets/waymo2bdd100k/testA/035.png']
+processing (0040)-th image... ['./datasets/waymo2bdd100k/testA/040.png']
+processing (0045)-th image... ['./datasets/waymo2bdd100k/testA/045.png']
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mwaymo2bdd100k[0m at: [34mhttps://wandb.ai/hrzannat710-university-of-toulon-france/CycleGAN-and-pix2pix/runs/q023dd6q[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20250510_115155-q023dd6q/logs[0m

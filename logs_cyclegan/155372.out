@@ -1,0 +1,106 @@
+wandb: Currently logged in as: hrzannat710 (hrzannat710-university-of-toulon-france) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+wandb: creating run
+wandb: Tracking run with wandb version 0.19.11
+wandb: Run data is saved locally in /home/mundus/hrashid173/CycleGAN-master/wandb/run-20250510_024349-d9gzy5bt
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run waymo2bdd100k
+wandb: ⭐️ View project at https://wandb.ai/hrzannat710-university-of-toulon-france/cycleGAN
+wandb: 🚀 View run at https://wandb.ai/hrzannat710-university-of-toulon-france/cycleGAN/runs/d9gzy5bt
+/home/mundus/hrashid173/.local/lib/python3.9/site-packages/torch/utils/data/dataloader.py:626: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/home/mundus/hrashid173/.local/lib/python3.9/site-packages/torch/optim/lr_scheduler.py:182: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  warnings.warn(
+----------------- Options ---------------
+               batch_size: 4                             	[default: 1]
+                    beta1: 0.5                           
+          checkpoints_dir: ./checkpoints                 
+           continue_train: False                         
+                crop_size: 256                           
+                 dataroot: ./datasets/waymo2bdd100k      	[default: None]
+             dataset_mode: unaligned                     
+                direction: AtoB                          
+              display_env: main                          
+             display_freq: 400                           
+               display_id: -1                            	[default: 1]
+            display_ncols: 4                             
+             display_port: 8097                          
+           display_server: http://localhost              
+          display_winsize: 256                           
+                    epoch: latest                        
+              epoch_count: 1                             
+                 gan_mode: lsgan                         
+                  gpu_ids: 0                             
+                init_gain: 0.02                          
+                init_type: normal                        
+                 input_nc: 3                             
+                  isTrain: True                          	[default: None]
+                 lambda_A: 10.0                          
+                 lambda_B: 10.0                          
+          lambda_identity: 0.5                           
+                load_iter: 0                             	[default: 0]
+                load_size: 286                           
+                       lr: 0.0002                        
+           lr_decay_iters: 50                            
+                lr_policy: linear                        
+         max_dataset_size: inf                           
+                    model: cycle_gan                     
+                 n_epochs: 100                           
+           n_epochs_decay: 100                           
+               n_layers_D: 3                             
+                     name: waymo2bdd100k                 	[default: experiment_name]
+                      ndf: 64                            
+                     netD: basic                         
+                     netG: resnet_9blocks                
+                      ngf: 64                            
+               no_dropout: True                          
+                  no_flip: False                         
+                  no_html: False                         
+                     norm: instance                      
+              num_threads: 4                             
+                output_nc: 3                             
+                    phase: train                         
+                pool_size: 50                            
+               preprocess: resize_and_crop               
+               print_freq: 100                           
+             save_by_iter: False                         
+          save_epoch_freq: 10                            	[default: 5]
+         save_latest_freq: 5000                          
+           serial_batches: False                         
+                   suffix:                               
+         update_html_freq: 1000                          
+                use_wandb: False                         
+                  verbose: False                         
+       wandb_project_name: CycleGAN-and-pix2pix          
+----------------- End -------------------
+dataset [UnalignedDataset] was created
+The number of training images = 400
+initialize network with normal
+initialize network with normal
+initialize network with normal
+initialize network with normal
+model [CycleGANModel] was created
+---------- Networks initialized -------------
+[Network G_A] Total number of parameters : 11.378 M
+[Network G_B] Total number of parameters : 11.378 M
+[Network D_A] Total number of parameters : 2.765 M
+[Network D_B] Total number of parameters : 2.765 M
+-----------------------------------------------
+create web directory ./checkpoints/waymo2bdd100k/web...
+learning rate 0.0002000 -> 0.0002000
+Traceback (most recent call last):
+  File "/home/mundus/hrashid173/CycleGAN-master/train.py", line 63, in <module>
+    model.optimize_parameters()   # calculate loss functions, get gradients, update network weights
+  File "/home/mundus/hrashid173/CycleGAN-master/models/cycle_gan_model.py", line 187, in optimize_parameters
+    self.backward_G()             # calculate gradients for G_A and G_B
+  File "/home/mundus/hrashid173/CycleGAN-master/models/cycle_gan_model.py", line 178, in backward_G
+    self.loss_G.backward()
+  File "/home/mundus/hrashid173/.local/lib/python3.9/site-packages/torch/_tensor.py", line 648, in backward
+    torch.autograd.backward(
+  File "/home/mundus/hrashid173/.local/lib/python3.9/site-packages/torch/autograd/__init__.py", line 353, in backward
+    _engine_run_backward(
+  File "/home/mundus/hrashid173/.local/lib/python3.9/site-packages/torch/autograd/graph.py", line 824, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 64.00 MiB. GPU 0 has a total capacity of 9.75 GiB of which 41.00 MiB is free. Process 1020711 has 352.00 MiB memory in use. Process 1100000 has 354.00 MiB memory in use. Process 1111316 has 294.00 MiB memory in use. Including non-PyTorch memory, this process has 9.63 GiB memory in use. Of the allocated memory 8.64 GiB is allocated by PyTorch, and 864.13 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+[1;34mwandb[0m: 
+[1;34mwandb[0m: 🚀 View run [33mwaymo2bdd100k[0m at: [34mhttps://wandb.ai/hrzannat710-university-of-toulon-france/cycleGAN/runs/d9gzy5bt[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20250510_024349-d9gzy5bt/logs[0m
